@@ -1,0 +1,57 @@
+<%= form_with(model: good, local: true) do |form| %>
+  <% if good.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(good.errors.count, "error") %> 商品を登録することが出来ません。</h2>
+
+      <ul>
+      <% good.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<br>
+  <div class="field">
+    <%= form.label :goods_id, :商品ID %>
+    <%= form.number_field :goods_id, id: :good_goods_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title, :商品名 %>
+    <%= form.text_area :title, id: :good_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description, :詳細 %>
+    <%= form.text_area :description, id: :good_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url, :画像URL %>
+    <%= form.text_area :image_url, id: :good_image_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price, :価格 %>
+    <%= form.number_field :price, id: :good_price %><span> 円</span>
+  </div>
+
+  <div class="field">
+    <%= form.label :date, :登録日 %>
+    <%= form.text_area :date, id: :good_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maker, :メーカー %>
+    <%= form.text_area :maker, id: :good_maker %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category, :カテゴリー %>
+    <%= form.select(:category, [['選択して下さい', ''],['本', '本'],['家電', '家電'],['おもちゃ', 'おもちゃ'], ['生活用品', '生活用品']]) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit('登録', :class=> 'fbtn') %>
+  </div>
+<% end %>

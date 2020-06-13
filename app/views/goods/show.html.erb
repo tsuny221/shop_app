@@ -1,0 +1,64 @@
+<h1>商品内容の表示</h1>
+<br>
+<p id="notice"><%= notice %></p>
+<span>　　</span><img height="100" style="border:ridge 5px #c0c0c0" src="<%= @good.image_url %>"/>
+<br>
+<br>
+<p>
+<font size="4px">
+  <strong>【商品ID:】 </strong>
+  <%= @good.goods_id %>
+</font>
+</p>
+
+<p>
+<font size="4px">
+  <strong>【商品名:】 </strong>
+  <%= @good.title %>
+</font>
+</p>
+
+<p>
+<font size="4px">
+  <strong>【説明:】 </strong>
+  <%= @good.description %>
+</font>
+</p>
+
+<p>
+<font size="4px">
+  <strong>【画像URL:】 </strong>
+  <%= @good.image_url %>
+</font>
+</p>
+
+<p>
+<font size="4px">
+  <strong>【価格:】 </strong>
+  <%= @good.price %><span>円</span>
+</font>
+</p>
+
+<p>
+<font size="4px">
+  <strong>【登録日:】 </strong>
+  <%=h ((@good.date).to_date).strftime('%Y年%m月%d日') %>
+</font>
+</p>
+
+<p>
+<font size="4px">
+  <strong>【メーカー:】 </strong>
+  <%= @good.maker %>
+</font>
+</p>
+
+<p>
+<font size="4px">
+  <strong>【カテゴリー:】 </strong>
+  <%= @good.category %>
+</font>
+</p>
+<br>
+<span>　　</span><%= link_to '編集', edit_good_path(@good), class: 'btn' %> <span>　</span>
+<%= link_to '戻る', goods_path, class: 'btn' %>
