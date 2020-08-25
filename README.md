@@ -1,24 +1,7 @@
-# README
+# shop_app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ECsite 練習
 
-Things you may want to cover:
+## Ruby on Rails で Web アプリケーション開発
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://mrradiology.hatenablog.jp/entry/2018/02/27/082330
